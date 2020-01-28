@@ -44,7 +44,7 @@ ob_start();
       <div class="grid-item" id='plan'><?=$usuarios[$i]->plan ?></div>
       <div class="grid-item" id='Estado'><?=$usuarios[$i]->estado ?></div>
       <div class="grid-item"><a href="#"
-		  onclick="confirmarBorrar('<?= $usuarios[$i]->user?>')">
+		  onclick="confirmarBorrar('<?=$usuarios[$i]->nombre?>','<?=$usuarios[$i]->user?>')">
 		  <img class="icono" title="borrar" src="web/img/papelera.png"></a>
 	    </div>
       <div class="grid-item"><a href="<?= $auto?>?orden=Modificar&id=<?= $usuarios[$i]->user ?>">

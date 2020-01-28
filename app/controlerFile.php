@@ -5,6 +5,9 @@
 
 include_once 'modeloFile.php';
 include_once 'config.php';
+include_once 'plantilla/Usuario.php';
+include_once 'AccesoDatos.php';
+include_once 'plantilla/Usuario.php';
 
 function ctlFileVerFicheros(){
     $usuarios=modeloUserGetAll();
