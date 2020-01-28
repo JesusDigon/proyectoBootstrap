@@ -11,7 +11,6 @@ foreach($usuarios as $clave=>$valor){
 	  $user=$usuarios[$clave];
 	}
   }
-
 ?>
 
 
