@@ -1,4 +1,9 @@
 <?php
+// DATOS DE CONEXION
+define ('DBSERVER','localhost');
+define ('DBNAME','usuarios' );
+define ('DBUSER','root');
+define ('DBPASSWORD','root');
 
 define ('GESTIONUSUARIOS','1');
 define ('GESTIONFICHEROS','2');

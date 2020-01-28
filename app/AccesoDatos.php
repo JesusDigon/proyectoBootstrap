@@ -1,10 +1,10 @@
 <?php
 include_once 'plantilla/Usuario.php';
+include_once 'config.php';
 class AccesoDatos {
     
     private static $modelo = null;
     private $dbh = null;
-    private $stmt = null;
     
     public static function initModelo(){
         if (self::$modelo == null){
@@ -16,8 +16,8 @@ class AccesoDatos {
     private function __construct(){
         
         try {
-            $dsn = "mysql:host=localhost;dbname=usuarios;charset=utf8";
-            $this->dbh = new PDO($dsn, "root", "root");
+            $dsn =  "mysql:host=".DBSERVER.";dbname=".DBNAME.";charset=utf8";
+            $this->dbh = new PDO($dsn,DBUSER,DBPASSWORD);
             $this->dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e){
             echo "Error de conexión ".$e->getMessage();
