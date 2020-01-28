@@ -133,6 +133,9 @@ function ctlUserModificar(){
                         if($valoresUsuario[3]!=$user->tipo){
                             $valoresUsuario[4]="B";
                         }
+                        if($valoresUsuario[4]!=$user->estado){
+                            $valoresUsuario[4]=$user->estado;
+                        }
                     }
                     //si es administrador, después de modificar se muestra ver usuarios
                     
