@@ -125,7 +125,15 @@ function ctlUserModificar(){
                 $valoresUsuario  = [$clave,trim($_POST['nombre']),trim($_POST['email']), $_POST['plan'], $_POST['estado']];
                 
                 if(modeloUserComprobacionesModificar($valoresUsuario, $msg, $user)){
-                    $valoresUsuario[0]=modeloUserCifrar($clave);
+                    if($user->clave!=$valoresUsuario[0]){
+                    $valoresUsuario[0]=modeloUserCifrar($clave);//si se modificó la contraseña se cifra, sino ya está cifrada
+                    }
+                    //si no es administrador compruebo si ha cambiado el plan y de ser asi, le dejo incativo para que sea el administrador quien de el visto bueno al cambio;
+                    if($_SESSION['modo']!=GESTIONUSUARIOS){
+                        if($valoresUsuario[3]!=$user->tipo){
+                            $valoresUsuario[4]="B";
+                        }
+                    }
                     //si es administrador, después de modificar se muestra ver usuarios
                     
                     if($_SESSION['modo']==GESTIONUSUARIOS){
@@ -133,6 +141,10 @@ function ctlUserModificar(){
                         ctlUserVerUsuarios();
                     }else{//si es un usuario normal se muestra ver ficheros
                         modeloUserUpdate($usuarioid,$valoresUsuario);
+                        if($valoresUsuario[4]=="B"){
+                            session_destroy();
+                            header('Location:index.php');//si ha cambiado el plan se le muestra la pantalla de inicio
+                        }
                         ctlFileVerFicheros();
                     }
                 }else{include_once 'plantilla/Modificar.php';}
@@ -162,10 +174,14 @@ function ctlUserNuevo() {
         $usuarioid      = trim($_POST['id']);
         $passrepetida   = trim($_POST['password2']);
         $clave          = trim($_POST['password']); 
-        $valoresUsuario = [$clave,trim($_POST['nombre']),trim($_POST['mail']), $_POST['plan'], "B"];
+        $valoresUsuario = [$clave,trim($_POST['nombre']),trim($_POST['mail']), $_POST['plan'], $_POST['estado']];
         
         if(modeloUserComprobacionesNuevo($usuarioid, $valoresUsuario, $passrepetida, $msg)) {//comprueba valores introducidos
             $valoresUsuario[0]=modeloUserCifrar($clave);
+            //Si no es un administrador el que crea el usuario el estado es Inactivo
+            if($_SESSION['modo']!=GESTIONUSUARIOS){
+                $valoresUsuario[4]="B";
+            }
             if(modeloUserNuevo($usuarioid, $valoresUsuario)){
                 $msg="Usuario dado de alta correctamente";
                 modeloUserCrearDir($usuarioid); 
