@@ -12,7 +12,6 @@ include_once 'plantilla/Usuario.php';
 function ctlFileVerFicheros(){
     $usuarios=modeloUserGetAll();
     $userId=$_SESSION['user'];
-    $user=$usuarios[$userId];
     $msg="";
     include_once 'plantilla/verFicheros.php';
 }
@@ -21,8 +20,6 @@ function ctlFileSubirFichero(){
     $msg="";
     $userId=$_SESSION['user'];
     if(!isset($_FILES['archivo'])){
-        $usuarios=modeloUserGetAll();
-        $user=$usuarios[$userId];
         include_once 'plantilla/subirFichero.php';
     }else{
         $archivo = $_FILES['archivo'];

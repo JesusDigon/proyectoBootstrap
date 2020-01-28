@@ -88,10 +88,10 @@ function modeloUserCifrar($clave){
 }
 
 //Funcion que comprueba las entradas del formulario modificar
-function modeloUserComprobacionesModificar($valoresusuario, &$msg, $datosUsuario){
+function modeloUserComprobacionesModificar($valoresusuario, &$msg, $user){
     if(modeloUserComprobarNombre($valoresusuario[1], $msg)){
-        if(modeloUserComprobarMail($valoresusuario[2], $msg, $datosUsuario[2])){
-            if($datosUsuario[0]!=$valoresusuario[0]){//condicion para ver si se cambio la contraseña y de ser asi se comprueba la nueva
+        if(modeloUserComprobarMail($valoresusuario[2], $msg, $user->correo)){
+            if($user->clave!=$valoresusuario[0]){//condicion para ver si se cambio la contraseña y de ser asi se comprueba la nueva
                 if(comprobarContraseñas($valoresusuario[0],$valoresusuario[0], $msg)){   
                     return true;}
                 }else{

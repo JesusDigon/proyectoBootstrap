@@ -126,12 +126,12 @@ class AccesoDatos {
 
     public function actualizaUsuario($id, $datosuser):bool{
         $this->actualizarUsuario->setFetchMode(PDO::FETCH_ASSOC);
-        $this->nuevoUsuario->bindValue(1,$datosuser[0]);
-        $this->nuevoUsuario->bindValue(2,$datosuser[1]);
-        $this->nuevoUsuario->bindValue(3,$datosuser[2]);
-        $this->nuevoUsuario->bindValue(4,$datosuser[3]);
-        $this->nuevoUsuario->bindValue(5,$datosuser[4]);
-        $this->nuevoUsuario->bindValue(6,$id);
+        $this->actualizarUsuario->bindValue(1,$datosuser[0]);
+        $this->actualizarUsuario->bindValue(2,$datosuser[1]);
+        $this->actualizarUsuario->bindValue(3,$datosuser[2]);
+        $this->actualizarUsuario->bindValue(4,$datosuser[3]);
+        $this->actualizarUsuario->bindValue(5,$datosuser[4]);
+        $this->actualizarUsuario->bindValue(6,$id);
         if($this->actualizarUsuario->execute()){
             return true;
         }

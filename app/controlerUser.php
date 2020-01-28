@@ -116,10 +116,15 @@ function ctlUserModificar(){
             if(!isset($_POST['Atrás'])){
                 $usuarioid       = trim($_POST['id']);
                 $usuarios        = modeloUserGetAll();
+                foreach($usuarios as $usuario){
+                    if($usuario->user==$usuarioid){
+                        $user=$usuario;
+                    }
+                }
                 $clave           = trim($_POST['clave']);
                 $valoresUsuario  = [$clave,trim($_POST['nombre']),trim($_POST['email']), $_POST['plan'], $_POST['estado']];
                 
-                if(modeloUserComprobacionesModificar($valoresUsuario, $msg, $usuarios[$usuarioid])){
+                if(modeloUserComprobacionesModificar($valoresUsuario, $msg, $user)){
                     $valoresUsuario[0]=modeloUserCifrar($clave);
                     //si es administrador, después de modificar se muestra ver usuarios
                     

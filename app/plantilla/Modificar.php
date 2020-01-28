@@ -6,9 +6,9 @@ ob_start();
 <div id='aviso'><b><?= (isset($msg))?$msg:"" ?></b></div>
 <?php  
 $auto = $_SERVER['PHP_SELF'];
-foreach($usuarios as $clave=>$valor){
-	if($valor->user == $_GET['id']){
-	  $user=$usuarios[$clave];
+foreach($usuarios as $usuario){
+	if($usuario->user == $usuarioid){
+	  $user=$usuario;
 	}
   }
 ?>
