@@ -1,6 +1,18 @@
+
+
+
 $(document).ready(inicializarEventos);  
 
   function inicializarEventos(){
+    //codigo jquery para que se muestre el nombre del fichero en el label
+    $('.custom-file-input').on('change', function(event) {
+      var inputFile = event.currentTarget;
+      $(inputFile).parent()
+          .find('.custom-file-label')
+          .html(inputFile.files[0].name);
+    });  
+    //
+
     if ($(window).width() < 600) {
       cambiarMenu();
       maquetarFicheros();
@@ -32,9 +44,9 @@ $(document).ready(inicializarEventos);
       $(this).css("color", "rgb(0, 0, 0)");
     });
 
-    $(window).resize(function(){
+    /*$(window).resize(function(){
         location.href = location.href;     
-    });
+    });*/
 
     $("img").hover(function(){
       $(this).css("width", "3vw");

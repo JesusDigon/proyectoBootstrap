@@ -10,7 +10,8 @@ ob_start();
 	    ?> <script>
 	    $(document).ready(function(){
 		    $("#<?=$idDiv?>").addClass("is-invalid");
-		    $(".invalid-tooltip").text("<?=$msg?>");
+			$(".invalid-tooltip").text("<?=$msg?>");
+			$(".invalid-tooltip").css("position", "relative");
 		    });
 	    </script>
 	<?php }?>

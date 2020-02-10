@@ -5,7 +5,16 @@
 ob_start();
 ?>
 
-<div id='aviso'><b><?= (isset($msg))?$msg:"" ?></b></div>
+<?php  
+	if($msg!==""){ ?> 
+	<script>
+	    $(document).ready(function(){
+		    $("#clave").addClass("is-invalid");
+		    $(".invalid-tooltip").text("<?=$msg?>");
+		    $(".invalid-tooltip").css("position", "relative");
+		    });
+	    </script>
+	<?php }?>
 
 <form method="GET" action="">
 
@@ -19,7 +28,7 @@ ob_start();
 		<div class="col">
 			<div class="form-group">
 				<label for="user">Usuario:</label>
-				<input type="text" class="form-control is-invalid" id="user" name="user" required
+				<input type="text" class="form-control" id="user" name="user" required
 				value="<?= $user ?>">
 				<div class="valid-feedback">OK</div>
 				<div class="invalid-tooltip" data-placement="right">Por favor, introduzca nombre de usuario</div>
@@ -33,7 +42,7 @@ ob_start();
 		<div class="col">
 			<div class="form-group">
 				<label for="clave">Contraseña:</label>
-				<input type="password" class="form-control is-invalid" id="clave" name="clave" required
+				<input type="password" class="form-control" id="clave" name="clave" required
 				value="<?= $clave ?>">
 				<div class="valid-feedback">OK</div>
 				<div class="invalid-tooltip">Por favor, introduzca la contraeña</div>
