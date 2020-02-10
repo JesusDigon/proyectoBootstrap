@@ -19,18 +19,31 @@ ob_start();
 		<div class="col">
 			<div class="form-group">
 				<label for="user">Usuario:</label>
-				<input type="text" class="form-control" id="user" name="user" required
+				<input type="text" class="form-control is-invalid" id="user" name="user" required
 				value="<?= $user ?>">
 				<div class="valid-feedback">OK</div>
-				<div class="invalid-feedback">Por favor, introduzca nombre de usuario</div>
+				<div class="invalid-tooltip" data-placement="right">Por favor, introduzca nombre de usuario</div>
 			</div>
+			</div>
+			</div>
+			
+			
+			
+	<div class="row">
+		<div class="col">
 			<div class="form-group">
 				<label for="clave">Contraseña:</label>
-				<input type="password" class="form-control" id="clave" name="clave" required
+				<input type="password" class="form-control is-invalid" id="clave" name="clave" required
 				value="<?= $clave ?>">
 				<div class="valid-feedback">OK</div>
-				<div class="invalid-feedback">Por favor, introduzca la contraeña</div>
+				<div class="invalid-tooltip">Por favor, introduzca la contraeña</div>
 			</div>
+			</div>
+			</div>
+			
+			
+	<div class="row">
+		<div class="col">
 			<div class="form-group">
 			<button name="orden" class="btn btn-primary" value="Entrar">Entrar</button>
 			</div>
@@ -39,6 +52,8 @@ ob_start();
 			</div>
 
 		</div>
+	</div>
+	</form>
 	</div>
 <?php 
 

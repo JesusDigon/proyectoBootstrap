@@ -39,7 +39,7 @@ $auto = $_SERVER['PHP_SELF'];
 <div class="grid-ficheros">
 <?php 
 $numeroArchivos=0;
-$espacioTotal=0;
+$espacioOcupado=0;
 
 //compruebo si hay un id por get(llego a la pantalla desde el login o si por el contrario, llego despues de haber 
 //borrado algún archivo, y rescato el el valor de id pasado por get en la función de borrar)
@@ -56,8 +56,10 @@ if(is_dir($directorio)){
       if( $archivo=="." || $archivo==".."){
           continue;
       }
+      $espacioFichero = round((filesize($directorio."/".$archivo)/1024),2);
       $numeroArchivos++;
-      $espacioTotal +=round((filesize($directorio."/".$archivo)/1024),2);
+      $espacioOcupado += $espacioFichero;
+      $espacioLibre = LIMITE_TOTAL - $espacioOcupado;
       ?>
 
         <div class="grid-item" id="nombreFichero"><a class="icono" id="DescargaF" href="#"  title="DESCARGAR" onclick="Descargar('<?=$directorio."','".$archivo."'"?>)"><?= $archivo ?></a></div>
@@ -84,7 +86,9 @@ else{
 <form id="botones" action="index.php?id=<?$userId?>">
 <div class="col">		
 	<span>Numero de ficheros: <?=$numeroArchivos?></span>
-	<span>Espacio ocupado: <?=$espacioTotal." Kb" ?></span>
+  <span>Espacio ocupado: <?=$espacioOcupado." Kb"?></span>
+  <span>Espacio libre: <?=$espacioLibre." Kb"?></span>
+  
 </div>
 </form>
 

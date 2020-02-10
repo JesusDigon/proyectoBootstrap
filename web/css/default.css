@@ -37,6 +37,7 @@ footer{
 .container{
 	position: relative;
 	height: auto;
+
 }
 
 #header {
@@ -90,13 +91,15 @@ h1{
 
 
 #aviso {
-	background: red;
-	color: black;
+	background: rgb(248, 125, 125);
+	box-shadow: 1px 1px 3px black;
+	border-radius: 10px 10px 10px 10px;
+	padding-left: 5vh;
+	color: rgb(83, 81, 81);
 }
 
 #formularioDetalles{
 	margin-left: -50vw;
-	margin-top: 20vh;
 }
 
 a {
@@ -147,6 +150,7 @@ textarea {
 }
 
 .container-ficheros{
+	margin-top: 10vh;
 	width: 88vw;
 }
 
@@ -163,12 +167,12 @@ textarea {
 
 .grid-ficheros {
 	overflow-y: auto;
-	height:52vh;
+	height:auto;
+	max-height: 52vh;
   	display: grid;
   	grid-template-columns: 25vw 9vw 9vw 9vw 13vw 11vw 10.5vw  ;
 	background-color: #5E9C97;
 	border: #000 solid 1px;
-	margin-top: 10vh;
 	color: #000000;	
 }
 
@@ -178,13 +182,13 @@ textarea {
 
 .grid-item {
   	background-color: rgba(255, 255, 255, 0.8);
-  	border: 1px solid rgba(0, 0, 0, 0.8);
- 	padding: 3%;
+  	border: 1px solid rgba(148, 147, 147, 0.8);
+	
   	font-size: 1em;
 	text-align: center; 
 	overflow:hidden;
 	white-space: nowrap;
-	height: 8vh;
+	height: 6vh;
 	text-overflow: ellipsis;
 	font-family: 'Montserrat', sans-serif;	
 }
@@ -240,9 +244,9 @@ li{
 	width: 20vw;
 }
 meter{
-	width:19vw;
-	height:3vh;
-	margin-top:.5vh;
+	width:30vw;
+	height:5vh;
+	
 }
 
 span{
@@ -252,9 +256,7 @@ span{
 	color: rgb(15, 92, 85);
 }
 
-#subirArchivo{
-	color: transparent;
-  }
+
 #DescargaF{
 	color:black;
 }

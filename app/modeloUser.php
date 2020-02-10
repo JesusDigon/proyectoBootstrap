@@ -70,11 +70,11 @@ function modeloUserUpdate($id, $datosuser){
 }
 
 //Funcion que comprueba todas las entradas del formulario Nuevo
-function modeloUserComprobacionesNuevo($usuarioid,$valoresusuario, $passrepetida ,&$msg){
-    if(modeloUserComprobarId($usuarioid, $msg)){
-        if(comprobarContraseñas($valoresusuario[0],$passrepetida, $msg)){
-            if(modeloUserComprobarNombre($valoresusuario[1], $msg)){
-                if(modeloUserComprobarMail($valoresusuario[2], $msg, "")){
+function modeloUserComprobacionesNuevo($usuarioid,$valoresusuario, $passrepetida ,&$msg, &$idDiv){
+    if(modeloUserComprobarId($usuarioid, $msg, $idDiv)){
+        if(comprobarContraseñas($valoresusuario[0],$passrepetida, $msg, $idDiv)){
+            if(modeloUserComprobarNombre($valoresusuario[1], $msg, $idDiv)){
+                if(modeloUserComprobarMail($valoresusuario[2], $msg, "", $idDiv)){
                     return true;
                 }
             }
@@ -88,18 +88,19 @@ function modeloUserCifrar($clave){
 }
 
 //Funcion que comprueba las entradas del formulario modificar
-function modeloUserComprobacionesModificar($valoresusuario, &$msg, $user){
-    if(modeloUserComprobarNombre($valoresusuario[1], $msg)){
-        if(modeloUserComprobarMail($valoresusuario[2], $msg, $user->correo)){
+function modeloUserComprobacionesModificar($valoresusuario, &$msg, $user, &$idDiv){
+    if(modeloUserComprobarNombre($valoresusuario[1], $msg, $idDiv)){
+        if(modeloUserComprobarMail($valoresusuario[2], $msg, $user->correo, $idDiv)){
             if($user->clave!=$valoresusuario[0]){//condicion para ver si se cambio la contraseña y de ser asi se comprueba la nueva
-                if(comprobarContraseñas($valoresusuario[0],$valoresusuario[0], $msg)){   
+                if(comprobarContraseñas($valoresusuario[0],$valoresusuario[0], $msg, $idDiv)){   
                     return true;}
                 }else{
                     return true;
                 }   }    }return false;
 }
 
-function modeloUserComprobarId($id, &$msg){
+function modeloUserComprobarId($id, &$msg, &$idDiv){
+    $idDiv="ident";
     if(strlen($id)<5 || strlen($id)>10){
         $msg="El id de usuario debe tener entre 5 y 10 caracteres.";
         return false;
@@ -120,15 +121,17 @@ function modeloUserComprobarId($id, &$msg){
     return true;
 }
 
-function modeloUserComprobarNombre($nombre, &$msg){
+function modeloUserComprobarNombre($nombre, &$msg, &$idDiv){
+    $idDiv="nombre";
     if(strlen($nombre)>20 || strlen($nombre)<1){
-        $msg="El nombre de estar comprendido entre 1 y 20 caracteres.";
+        $msg="El nombre debe estar comprendido entre 1 y 20 caracteres.";
         return false;
     }
     return true;
 }
 
-function modeloUserComprobarMail($mail, &$msg, $mailuser){
+function modeloUserComprobarMail($mail, &$msg, $mailuser, &$idDiv){
+    $idDiv="mail";
     if($mail!=$mailuser){
         $bd=abrirBD();
         $listaCorreos=$bd->obtenerCorreos();
@@ -148,7 +151,8 @@ function modeloUserComprobarMail($mail, &$msg, $mailuser){
     
 }
 
-function comprobarContraseñas($contraseña1,$contraseña2, &$msg){
+function comprobarContraseñas($contraseña1,$contraseña2, &$msg, &$idDiv){
+    $idDiv="password";
     if($contraseña1==$contraseña2){
         if(strlen($contraseña1)>=8 && strlen($contraseña1)<=15){
             if(ctype_upper($contraseña1)||ctype_lower($contraseña1)){
@@ -169,6 +173,7 @@ function comprobarContraseñas($contraseña1,$contraseña2, &$msg){
             }
     }else{
         $msg="Las contraseñas no coinciden";
+        $idDiv="password2";
         return false;
         }
 }

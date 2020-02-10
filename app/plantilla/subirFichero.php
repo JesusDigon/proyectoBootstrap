@@ -3,11 +3,21 @@
 // No se envia al navegador
 ob_start();
 ?>
-<div id='aviso'><b><?= (isset($msg))?$msg:"" ?></b></div>
+
+	<?php  
+	if($msg!==""){ ?> 
+	<script>
+	    $(document).ready(function(){
+		    $("#subirArchivo").addClass("is-invalid");
+		    $(".invalid-tooltip").text("<?=$msg?>");
+		    $(".invalid-tooltip").css("position", "fixed");
+		    });
+	    </script>
+	<?php }?>
 <div class="container">
   <h2>Subir fichero</h2>
   
-  <form name="f1" enctype="multipart/form-data" action="index.php?orden=Subir Fichero" method="post">
+  <form name="f1" enctype="multipart/form-data" action="index.php?orden=Subir Fichero" method="post" class="was-validated">
 	  <div class="row">
       <div class="col">
         <input type="hidden" name="MAX_FILE_SIZE" value="199999990" />
@@ -16,8 +26,10 @@ ob_start();
 
     <div class="row">
       <div class="col">
-        <div class="form-group">
-          <input name="archivo" type="file" id="subirArchivo" value="Examinar" />      
+        <div class="custom-file">
+          <input name="archivo" class="custom-file-input" type="file" id="subirArchivo" value="Examinar" required>  
+          <label class="custom-file-label" for="subirArchivo">Choose file...</label>
+          <div class="invalid-tooltip">a</div>    
         </div>
       </div>
     </div>

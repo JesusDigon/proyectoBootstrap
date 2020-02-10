@@ -42,6 +42,10 @@ function VerArchivos(){
 }
 
 function Descargar(id,fichero){
+	document.location.href="?orden=Descarga&fichero="+fichero+"&id="+id;
+}
+
+function Compartir(id,fichero){
 	document.location.href="?orden=Compartir&fichero="+fichero+"&id="+id;
 }
 

@@ -41,8 +41,8 @@ ob_start();
     	<div class="grid-item" id="identificador"><?= $usuarios[$i]->user ?></div>
       <div class="grid-item" ><?=$usuarios[$i]->nombre ?></div>
       <div class="grid-item" id='Correo' ><?=$usuarios[$i]->correo ?></div>
-      <div class="grid-item" id='plan'><?=$usuarios[$i]->plan ?></div>
-      <div class="grid-item" id='Estado'><?=$usuarios[$i]->estado ?></div>
+      <div class="grid-item" id='plan'><?=PLANES[$usuarios[$i]->plan] ?></div>
+      <div class="grid-item" id='Estado'><?=ESTADOS[$usuarios[$i]->estado] ?></div>
       <div class="grid-item"><a href="#"
 		  onclick="confirmarBorrar('<?=$usuarios[$i]->nombre?>','<?=$usuarios[$i]->user?>')">
 		  <img class="icono" title="borrar" src="web/img/papelera.png"></a>

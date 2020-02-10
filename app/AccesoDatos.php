@@ -42,7 +42,7 @@ class AccesoDatos {
         $this->consultaUsuarios->setFetchMode(PDO::FETCH_CLASS,'usuarios');
         if ( $this->consultaUsuarios->execute() ){
             while ( $fila = $this->consultaUsuarios->fetch()){
-               $usuario = new Usuario($fila['user'],$fila['clave'],$fila['nombre'],$fila['correo'],PLANES[$fila['tipo']],ESTADOS[$fila['estado']]);
+               $usuario = new Usuario($fila['user'],$fila['clave'],$fila['nombre'],$fila['correo'],$fila['tipo'],$fila['estado']);
                $usuarios[]= $usuario;
             }
         }
