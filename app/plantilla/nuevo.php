@@ -4,7 +4,16 @@
 ob_start();
 
 ?>
-<div id='aviso'><b><?= (isset($msg))?$msg:"" ?></b></div>
+<?php  
+	if(isset($msg)){ ?> 
+	<script>
+	    $(document).ready(function(){
+		    $("#<?=$idDiv?>").addClass("is-invalid");
+		    $(".invalid-tooltip").text("<?=$msg?>");
+		    $(".invalid-tooltip").css("position", "relative");
+		    });
+	    </script>
+	<?php }?>
 
 <?php $auto = $_SERVER['PHP_SELF'];?>
 
@@ -16,10 +25,10 @@ ob_start();
 		<div class="col">
 			<div class="form-group">
 				<label for="id">Identificador:</label>
-				<input type="text" class="form-control" id="id" placeholder="Introduzca un identificador" name="id" required
+				<input type="text" class="form-control" id="ident" placeholder="Introduzca un identificador" name="id" required
 					value="<?=(isset($_POST['id']))?$_POST['id']:""?>">
 				<div class="valid-feedback">Valid.</div>
-				<div class="invalid-feedback">Por favor, introduzca un identificador</div>
+				<div class="invalid-tooltip">Por favor, introduzca un identificador</div>
 			</div>
 		</div>
 		<div class="col">
@@ -28,7 +37,7 @@ ob_start();
 				<input type="text" class="form-control" id="nombre" placeholder="Introduzca un nombre" name="nombre" required
 					value="<?=(isset($_POST['nombre']))?$_POST['nombre']:""?>">
 				<div class="valid-feedback">Valid.</div>
-				<div class="invalid-feedback">Por favor, introduzca un nombre</div>
+				<div class="invalid-tooltip">Por favor, introduzca un nombre</div>
 			</div>
 		</div>
 	</div>
@@ -39,7 +48,7 @@ ob_start();
 				<input type="mail" class="form-control" id="mail" placeholder="Ejemplo@ejemplo.com" name="mail" required
 					value="<?=(isset($_POST['mail']))?$_POST['mail']:""?>">
 				<div class="valid-feedback">Valid.</div>
-				<div class="invalid-feedback">Por favor, introduzca un email</div>
+				<div class="invalid-tooltip">Por favor, introduzca un email</div>
 			</div>
 		</div>
 	</div>
@@ -50,7 +59,7 @@ ob_start();
 				<input type="password" class="form-control" id="password" name="password" required
 					value="<?=(isset($_POST['password']))?$_POST['password']:""?>">
 				<div class="valid-feedback">Valid.</div>
-				<div class="invalid-feedback">Por favor, introduzca una contraseña</div>
+				<div class="invalid-tooltip">Por favor, introduzca una contraseña</div>
 			</div>
 		</div>
 		<div class="col">
@@ -59,7 +68,7 @@ ob_start();
 				<input type="password" class="form-control" id="password2" name="password2" required
 					value="<?=(isset($_POST['password2']))?$_POST['password2']:""?>">
 				<div class="valid-feedback">Valid.</div>
-				<div class="invalid-feedback">Por favor, confirme la contraseña contraseña</div>
+				<div class="invalid-tooltip">Por favor, confirme la contraseña contraseña</div>
 			</div>
 		</div>
 	</div>

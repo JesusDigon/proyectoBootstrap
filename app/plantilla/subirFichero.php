@@ -10,14 +10,14 @@ ob_start();
 	    $(document).ready(function(){
 		    $("#subirArchivo").addClass("is-invalid");
 		    $(".invalid-tooltip").text("<?=$msg?>");
-		    $(".invalid-tooltip").css("position", "fixed");
+		    $(".invalid-tooltip").css("position", "relative");
 		    });
 	    </script>
 	<?php }?>
 <div class="container">
   <h2>Subir fichero</h2>
   
-  <form name="f1" enctype="multipart/form-data" action="index.php?orden=Subir Fichero" method="post" class="was-validated">
+  <form name="f1" enctype="multipart/form-data" action="index.php?orden=Subir Fichero" method="post" class="needs-validation">
 	  <div class="row">
       <div class="col">
         <input type="hidden" name="MAX_FILE_SIZE" value="199999990" />
@@ -27,8 +27,8 @@ ob_start();
     <div class="row">
       <div class="col">
         <div class="custom-file">
+        <label class="custom-file-label" for="subirArchivo">Choose file...</label>
           <input name="archivo" class="custom-file-input" type="file" id="subirArchivo" value="Examinar" required>  
-          <label class="custom-file-label" for="subirArchivo">Choose file...</label>
           <div class="invalid-tooltip">a</div>    
         </div>
       </div>
