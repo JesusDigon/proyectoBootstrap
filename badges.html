@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+  
+       
+        #zonaScroll{
+          overflow: auto;
+            height: 500px;
+        }
+       
+        #carrusel{
+          height: 250px;
+        }
+        .carousel-inner{
+          height: 250px;
+        }
+        .carousel-item{
+          height: 250px;
+        }
+        .imgCarousel{
+          height: 250px;
+        }
+        video {
+            width: 30vw;
+            height: 20vh;
+        }
+       
+       
+    </style>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+  </head>
+  <body>
+    <main class="container-fluid">
+      <header class="row">
+      <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
+        <a class="navbar-brand" href="#">Bootstrap</a>
+        <img src="bootstrap-brands.svg" width="30" height="30" alt="">
+        <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ejemplos</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+            <a class="dropdown-item active" href="#">BADGES</a>
+            <a class="dropdown-item" href="pagination.html">PAGINATION</a>
+            </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="formulario.html">Envia tus dudas</a>
+              </li>
+          </ul>
+          <form class="form-inline my-2 my-md-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Buscar" id="textoAbuscar">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="buscador">Buscar</button>
+          </form>
+        </div>
+      </nav>
+    </header>
+    <div class="row mt-5 mb-5"></div>
+    <header class="row bg-primary justify-content-center mt-5 mb-3">
+        <h1 class="text-capitalize text-white">BADGES</h1>
+    </header>
+   
+    <section class="row  mb-5" id="spyScroll">
+        <nav id="navbar-medio" class=" col-md-3 navbar navbar-expand-md navbar-light bg-light mt-5 mb-5 ">
+            <nav id="navCambiable" class="nav nav-pills flex-column mb-5 p-2 rounded">
+              <a class="nav-link" href="#item-1">EJEMPLOS</a>
+              <a class="nav-link" href="#item-2">CONTEXTUAL VARIATIONS</a>
+              <a class="nav-link" href="#item-3">PILL BADGES</a>
+              <a class="nav-link" href="#item-4">LINKS</a>
+              <a class="nav-link" href="#item-5">INSID AN ELEMENT</a>
+              </nav>
+            </nav>
+          
+          <div data-spy="scroll" data-target="#navbar-medio" data-offset="0" class="col-md-8 mt-5 ml-5 mb-5" id="zonaScroll">
+            <h1 id="item-1" class="mt-3 mb-3">EJEMPLOS</h1>
+            
+            <h2>Example heading <span class="badge badge-secondary">New</span></h2>
+            <h3>Example heading <span class="badge badge-secondary">New</span></h3>
+            <h4>Example heading <span class="badge badge-secondary">New</span></h4>
+            <h5>Example heading <span class="badge badge-secondary">New</span></h5>
+            <h6>Example heading <span class="badge badge-secondary">New</span></h6> 
+            
+            <h1 id="item-2"class="mt-3 mb-3">CONTEXTUAL VARIATIONS</h1>
+            <p>Utilizar cualquiera de las clases de contexto ( .badge-*) para cambiar el color de una tarjeta de identificación:</p>
+            <p>
+                <span class="badge badge-primary">Primary</span>
+                <span class="badge badge-secondary">Secondary</span>
+                <span class="badge badge-success">Success</span>
+                <span class="badge badge-danger">Danger</span>
+                <span class="badge badge-warning">Warning</span>
+                <span class="badge badge-info">Info</span>
+                <span class="badge badge-light">Light</span>
+                <span class="badge badge-dark">Dark</span>
+            </p>
+            <h1 id="item-3"class="mt-3 mb-3">PILL BADGES</h1>
+            <p>Utilice la .badge-pillclase para hacer las insignias más redonda: </p>
+            <p>
+                <span class="badge badge-pill badge-primary">Primary</span>
+                <span class="badge badge-pill badge-secondary">Secondary</span>
+                <span class="badge badge-pill badge-success">Success</span>
+                <span class="badge badge-pill badge-danger">Danger</span>
+                <span class="badge badge-pill badge-warning">Warning</span>
+                <span class="badge badge-pill badge-info">Info</span>
+                <span class="badge badge-pill badge-light">Light</span>
+                <span class="badge badge-pill badge-dark">Dark</span>
+            </p>
+            <h1 id="item-4"class="mt-3 mb-3">LINKS</h1>
+            <p>El uso de las clases contextuales .badge- * en un elemento "a" proporciona rápidamente insignias accionables con estados de desplazamiento y enfoque.</p>
+            <p>
+                <a href="#" class="badge badge-primary">Primary</a>
+                <a href="#" class="badge badge-secondary">Secondary</a>
+                <a href="#" class="badge badge-success">Success</a>
+                <a href="#" class="badge badge-danger">Danger</a>
+                <a href="#" class="badge badge-warning">Warning</a>
+                <a href="#" class="badge badge-info">Info</a>
+                <a href="#" class="badge badge-light">Light</a>
+                <a href="#" class="badge badge-dark">Dark</a>
+            </p>
+            <h1 id="item-5"class="mt-3 mb-3">INSIDE AN ELEMENT</h1>
+                <button type="button" class="btn btn-primary">
+                    Notifications <span class="badge badge-light">4</span>
+                </button>
+            <p>Tenga en cuenta que dependiendo de cómo se usen, las insignias pueden ser confusas para los usuarios de lectores de pantalla y tecnologías de asistencia similares. Si bien el estilo de las insignias proporciona una señal visual en cuanto a su propósito, a estos usuarios simplemente se les presentará el contenido de la insignia. Dependiendo de la situación específica, estas insignias pueden parecer palabras o números adicionales al azar al final de una oración, enlace o botón.
+
+            A menos que el contexto sea claro (como en el ejemplo de "Notificaciones", donde se entiende que el "4" es el número de notificaciones), considere incluir un contexto adicional con un texto adicional oculto visualmente.</p>
+                <button type="button" class="btn btn-primary">
+                    Profile <span class="badge badge-light">9</span>
+                    <span class="sr-only">unread messages</span>
+                  </button>
+          </div>
+    </section>
+    <div class="row mt-5 mb-5"></div>
+    <header class="row bg-primary justify-content-center mb-3">
+        <h1 class="text-capitalize text-white">VIDEO EXPLICATIVO</h1>
+    </header>
+    <section class="row justify-content-center mt-1">
+         <div class="col-sm-7 mt-5 embed-responsive embed-responsive-4by3"> -->  
+          <video class="embed-responsive-item" controls>
+              <source src="badge2.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+    </section>
+        <footer class="row bg-dark justify-content-center mt-5 p-2">
+          <h5 class="text-center text-white">Página creada por Jesús Digón.</h5>
+      </footer>
+
+
+    </main>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="jquery/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="jquery/funciones.js"></script>
+  </body>
+</html>
