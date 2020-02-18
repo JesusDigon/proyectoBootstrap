@@ -29,7 +29,18 @@ $(document).ready(function(){
   });
 });
  
-
+$(document).ready(function(){
+  $("#boton").on("click", function(){
+    $("input").each(function(){
+      if($(this).val()==""){
+        $(this).addClass("is-invalid");
+      }else{
+        $(this).addClass("is-valid");
+        $(this).removeClass("is-invalid");
+      }
+    });
+  });
+});
      
   $(window).resize(function(){
     if($(window).width()<=768){

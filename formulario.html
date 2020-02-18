@@ -36,14 +36,14 @@
     <main class="container-fluid">
       <header class="row">
       <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
-        <a class="navbar-brand" href="#">Bootstrap</a>
+        <a class="navbar-brand" href="index.html">Bootstrap</a>
         <img src="bootstrap-brands.svg" width="30" height="30" alt="">
         <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
         aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="collapsibleNavId">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item">
-            <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ejemplos</a>
@@ -53,7 +53,7 @@
             </div>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="formulario.html">Envia tus dudas</a>
+              <a class="nav-link" href="#">Envia tus dudas</a>
               </li>
           </ul>
           <form class="form-inline my-2 my-md-0">
@@ -75,14 +75,20 @@
                 <label for="validationTooltip01">Nombre</label>
                 <input type="text" class="form-control" id="validationTooltip01" value="Mark" required>
                 <div class="invalid-tooltip">
-                  Looks good!
+                  Debes rellenar este campo
+                </div>
+                <div class="valid-tooltip">
+                  ¡Bien hecho!
                 </div>
               </div>
               <div class="col-md-5 mb-3">
                 <label for="validationTooltip02">Apellidos</label>
                 <input type="text" class="form-control" id="validationTooltip02" value="Otto" required>
                 <div class="invalid-tooltip">
-                  Looks good!
+                  Debes poner tus apellidos
+                </div>
+                <div class="valid-tooltip">
+                  ¡Bien hecho!
                 </div>
               </div>
               <div class="col-md-5 mb-3">
@@ -93,7 +99,10 @@
                   </div>
                   <input type="text" class="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required>
                   <div class="invalid-tooltip">
-                    Please choose a unique and valid username.
+                    Introduce una dirección de correo válida
+                  </div>
+                  <div class="valid-tooltip">
+                    ¡Bien hecho!
                   </div>
                 </div>
               </div>
@@ -101,7 +110,10 @@
                 <label for="validationTooltip03">Ciudad</label>
                 <input type="text" class="form-control" id="validationTooltip03" required>
                 <div class="invalid-tooltip">
-                  Please provide a valid city.
+                  Introduce el nombre de tu ciudad
+                </div>
+                <div class="valid-tooltip">
+                  ¡Bien hecho!
                 </div>
               </div>
               <div class="col-md-3 mb-3">
@@ -117,30 +129,45 @@
                   <option>Nicaragua</option>
                 </select>
                 <div class="invalid-tooltip">
-                  Please select a valid state.
+                  Por favor, selecciona tu país
+                </div>
+                <div class="valid-tooltip">
+                  ¡Bien hecho!
                 </div>
               </div>
               <div class="col-md-3 mb-3">
-                <label for="validationTooltip05">Zip</label>
+                <label for="validationTooltip05">Código Postal</label>
                 <input type="text" class="form-control" id="validationTooltip05" required>
                 <div class="invalid-tooltip">
-                  Please provide a valid zip.
+                  Por favor, indica tu código postal
+                </div>
+                <div class="valid-tooltip">
+                  ¡Bien hecho!
                 </div>
               </div>
                 <div class="col-md-3 mb-3">
                   <label for="validationTooltip05">Teléfono</label>
                   <input type="text" class="form-control" id="validationTooltip05" required>
                   <div class="invalid-tooltip">
-                    Please provide a valid zip.
+                    Por favor, indica tu número de teléfono
+                  </div>
+                  <div class="valid-tooltip">
+                    ¡Bien hecho!
                   </div>
               </div>
               <div class="form-group col-md-6">
                 <label for="exampleFormControlTextarea1">Introduzca el motivo de su consulta</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+                <div class="invalid-tooltip">
+                  Por favor, indica tu número de teléfono
+                </div>
+                <div class="valid-tooltip">
+                  ¡Bien hecho!
+                </div>
               </div>
             </div>
               <div class="form-row justify-content-around">
-                <button class="btn btn-primary" type="submit" onclick="enviar()">Enviar</button>
+                <button class="btn btn-primary" type="submit" id="boton" onclick="enviar()">Enviar</button>
               </div>
             </div>
             
