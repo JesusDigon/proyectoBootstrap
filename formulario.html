@@ -1,231 +1,235 @@
 <!doctype html>
 <html>
-  <head>
-    <style>
-  
-      
-        #zonaScroll{
-          overflow: auto;
-            height: 500px;
-        }
-      
-        #carrusel{
-          height: 250px;
-        }
-        .carousel-inner{
-          height: 250px;
-        }
-        .carousel-item{
-          height: 250px;
-        }
-        .imgCarousel{
-          height: 250px;
-        }
-      
-    </style>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/vnd.microsoft.icon" href="iconos/bootstrap-brands.ico" sizes="64x64">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-  </head>
-  <body>
-    <main class="container-fluid">
-      <header class="row">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Favicon -->
+  <link rel="icon" type="image/vnd.microsoft.icon" href="iconos/bootstrap-brands.ico" sizes="64x64">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/1.css">
+</head>
+
+<body>
+  <!-- Contenedor principal -->
+  <main class="container-fluid">
+
+    <!-- Barra de navegación -->
+    <header class="row">
       <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
         <a class="navbar-brand" href="index.html">Bootstrap</a>
         <img src="iconos/bootstrap-brands.svg" width="30" height="30" alt="">
-        <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-        aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+          aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"><span
+            class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="collapsibleNavId">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ejemplos</a>
-            <div class="dropdown-menu" aria-labelledby="dropdownId">
-            <a class="dropdown-item" href="badges.html">BADGES</a>
-            <a class="dropdown-item" href="pagination.html">PAGINATION</a>
-            </div>
+              <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">Ejemplos</a>
+              <div class="dropdown-menu" aria-labelledby="dropdownId">
+                <a class="dropdown-item" href="badges.html">BADGES</a>
+                <a class="dropdown-item" href="pagination.html">PAGINATION</a>
+              </div>
             </li>
             <li class="nav-item active">
               <a class="nav-link" href="#">Envia tus dudas</a>
-              </li>
+            </li>
           </ul>
           <form class="form-inline my-2 my-md-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Buscar" id="textoAbuscar">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="buscador">Buscar</button>
+            <input class="form-control mr-sm-2" type="text" placeholder="Buscar" id="textoAbuscar">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="buscador">Buscar</button>
           </form>
         </div>
       </nav>
     </header>
+
+    <!-- Cabeceras Secundarias -->
     <div class="row mt-5 mb-5"></div>
     <header class="row bg-primary justify-content-center mt-5 mb-3">
-        <h1 class="text-capitalize text-white">CONTACTA CON NOSOTROS</h1>
+      <h1 class="text-capitalize text-white">CONTACTA CON NOSOTROS</h1>
     </header>
 
+    <!-- Formulario -->
     <section class="row">
-        <form class="need-validation" id="formularioCentral" >
-            <div class="form-row justify-content-around">
-              <div class="col-md-5 mb-3">
-                <label for="nombre">Nombre</label>
-                <input type="text" class="form-control" id="nombre" value="Mark" required>
-                <div class="invalid-tooltip">
-                  Debes rellenar este campo
-                </div>
-                <div class="valid-tooltip">
-                  ¡Bien hecho!
-                </div>
+      <form class="need-validation" id="formularioCentral">
+        <div class="form-row justify-content-around">
+          <div class="col-md-5 mb-3">
+            <label for="nombre">Nombre</label>
+            <input type="text" class="form-control" id="nombre" value="Mark" required>
+            <div class="invalid-tooltip">
+              Debes rellenar este campo
+            </div>
+            <div class="valid-tooltip">
+              ¡Bien hecho!
+            </div>
+          </div>
+          <div class="col-md-5 mb-3">
+            <label for="apellidos">Apellidos</label>
+            <input type="text" class="form-control" id="validationTooltip02" value="Otto" required>
+            <div class="invalid-tooltip">
+              Debes poner tus apellidos
+            </div>
+            <div class="valid-tooltip">
+              ¡Bien hecho!
+            </div>
+          </div>
+          <div class="col-md-5 mb-3">
+            <label for="validationTooltipUsername">E-mail</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
               </div>
-              <div class="col-md-5 mb-3">
-                <label for="apellidos">Apellidos</label>
-                <input type="text" class="form-control" id="validationTooltip02" value="Otto" required>
-                <div class="invalid-tooltip">
-                  Debes poner tus apellidos
-                </div>
-                <div class="valid-tooltip">
-                  ¡Bien hecho!
-                </div>
+              <input type="email" class="form-control" id="correo" aria-describedby="validationTooltipUsernamePrepend"
+                required>
+              <div class="invalid-tooltip">
+                Introduce una dirección de correo válida
               </div>
-              <div class="col-md-5 mb-3">
-                <label for="validationTooltipUsername">E-mail</label>
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
-                  </div>
-                  <input type="email" class="form-control" id="correo" aria-describedby="validationTooltipUsernamePrepend" required>
-                  <div class="invalid-tooltip">
-                    Introduce una dirección de correo válida
-                  </div>
-                  <div class="valid-tooltip">
-                    ¡Bien hecho!
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-5 mb-3">
-                <label for="validationTooltip03">Ciudad</label>
-                <input type="text" class="form-control" id="validationTooltip03" required>
-                <div class="invalid-tooltip">
-                  Introduce el nombre de tu ciudad
-                </div>
-                <div class="valid-tooltip">
-                  ¡Bien hecho!
-                </div>
-              </div>
-              <div class="col-md-3 mb-3">
-                <label for="validationTooltip04">País</label>
-                <select class="custom-select" id="validationTooltip04" required>
-                  <option selected disabled value="">Elige un país...</option>
-                  <option>España</option>
-                  <option>Francia</option>
-                  <option>Portugal</option>
-                  <option>México</option>
-                  <option>Ecuador</option>
-                  <option>Venezuela</option>
-                  <option>Nicaragua</option>
-                </select>
-                <div class="invalid-tooltip">
-                  Por favor, selecciona tu país
-                </div>
-                <div class="valid-tooltip">
-                  ¡Bien hecho!
-                </div>
-              </div>
-              <div class="col-md-3 mb-3">
-                <label for="validationTooltip05">Código Postal</label>
-                <input type="text" class="form-control" id="validationTooltip05" required>
-                <div class="invalid-tooltip">
-                  Por favor, indica tu código postal
-                </div>
-                <div class="valid-tooltip">
-                  ¡Bien hecho!
-                </div>
-              </div>
-                <div class="col-md-3 mb-3">
-                  <label for="validationTooltip05">Teléfono</label>
-                  <input type="text" class="form-control" id="validationTooltip05" required>
-                  <div class="invalid-tooltip">
-                    Por favor, indica tu número de teléfono
-                  </div>
-                  <div class="valid-tooltip">
-                    ¡Bien hecho!
-                  </div>
-              </div>
-              <div class="form-group col-md-6">
-                <label for="exampleFormControlTextarea1">Introduzca el motivo de su consulta</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
-                <div class="invalid-tooltip">
-                  Por favor, indica tu número de teléfono
-                </div>
-                <div class="valid-tooltip">
-                  ¡Bien hecho!
-                </div>
+              <div class="valid-tooltip">
+                ¡Bien hecho!
               </div>
             </div>
-              <div class="form-row justify-content-around">
-                <button class="btn btn-primary" type="submit" onclick="return false"id="boton">Enviar</button>
-              </div>
+          </div>
+          <div class="col-md-5 mb-3">
+            <label for="validationTooltip03">Ciudad</label>
+            <input type="text" class="form-control" id="validationTooltip03" required>
+            <div class="invalid-tooltip">
+              Introduce el nombre de tu ciudad
             </div>
-            
-          </form>
+            <div class="valid-tooltip">
+              ¡Bien hecho!
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="validationTooltip04">País</label>
+            <select class="custom-select" id="validationTooltip04" required>
+              <option selected disabled value="">Elige un país...</option>
+              <option>España</option>
+              <option>Francia</option>
+              <option>Portugal</option>
+              <option>México</option>
+              <option>Ecuador</option>
+              <option>Venezuela</option>
+              <option>Nicaragua</option>
+            </select>
+            <div class="invalid-tooltip">
+              Por favor, selecciona tu país
+            </div>
+            <div class="valid-tooltip">
+              ¡Bien hecho!
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="validationTooltip05">Código Postal</label>
+            <input type="text" class="form-control" id="validationTooltip05" required>
+            <div class="invalid-tooltip">
+              Por favor, indica tu código postal
+            </div>
+            <div class="valid-tooltip">
+              ¡Bien hecho!
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="validationTooltip05">Teléfono</label>
+            <input type="text" class="form-control" id="validationTooltip05" required>
+            <div class="invalid-tooltip">
+              Por favor, indica tu número de teléfono
+            </div>
+            <div class="valid-tooltip">
+              ¡Bien hecho!
+            </div>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="exampleFormControlTextarea1">Introduzca el motivo de su consulta</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+            <div class="invalid-tooltip">
+              Por favor, indica tu número de teléfono
+            </div>
+            <div class="valid-tooltip">
+              ¡Bien hecho!
+            </div>
+          </div>
+        </div>
+        <div class="form-row justify-content-around">
+          <button class="btn btn-primary" type="submit" onclick="return false" id="boton">Enviar</button>
+        </div>
+        </div>
+
+      </form>
     </section>
 
+    <!-- Cabeceras Secundarias -->
     <div class="row mt-5 mb-5"></div>
     <header class="row bg-primary justify-content-center mt-5 mb-3">
-        <h1 class="text-capitalize text-white">¿DONDE ESTAMOS?</h1>
+      <h1 class="text-capitalize text-white">¿DONDE ESTAMOS?</h1>
     </header>
 
+    <!-- Google maps -->
     <section class="row  justify-content-around">
       <div class="col-sm-8 embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.094430517899!2d-3.699776584982302!3d40.47317587935868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422912c3f95711%3A0xfd6d0a1eb67bcfc!2sIES%20Tetuan!5e0!3m2!1sen!2ses!4v1582024509707!5m2!1sen!2ses" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        <iframe class="embed-responsive-item"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.094430517899!2d-3.699776584982302!3d40.47317587935868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422912c3f95711%3A0xfd6d0a1eb67bcfc!2sIES%20Tetuan!5e0!3m2!1sen!2ses!4v1582024509707!5m2!1sen!2ses"
+          width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
       </div>
     </section>
 
-  </section>
-  <footer class="row bg-primary  mt-5 p-2 ">
-    <p class="text-center text-white small col-sm-6 mt-3">Diseño del sitio © 2020 Jesús Digón. Iconos cedidos por iconos.iconos.com. Siguenos en nuestras RRSS: </p>
-    <div class="col-5-sm text-center">
-    <a href="http://www.twitter.com" ><img class="col-2 rrss embed-responsive-item" src="iconos/social_Twitter_2755.png"></a>
-    <a href="http://www.github.com"><img class="col-2 rrss embed-responsive-item" src="iconos/Github_icon-icons.com_49946.png"></a>
-    <a href="http://www.linkedin.com" ><img class="col-2 rrss embed-responsive-item" src="iconos/sociallinkedin_member_2751.png"></a>
-    <a href="http://www.instagram.com" ><img class="col-2 rrss embed-responsive-item" src="iconos/instagram_f_icon-icons.com_65485.svg"></a>
-    </div>
-    <div class="col-md-1 col-sm-3 col-4 text-center ">
-    <img class="embed-responsive-item" src="iconos/by-nc-nd.eu.svg">
-  </div>
-</footer>
+    <!-- Pie de página -->
+    <footer class="row bg-primary  mt-5 p-2 ">
+      <p class="text-center text-white small col-sm-6 mt-3">Diseño del sitio © 2020 Jesús Digón. Iconos cedidos por
+        iconos.iconos.com. Siguenos en nuestras RRSS: </p>
+      <div class="col-5-sm text-center">
+        <a href="http://www.twitter.com"><img class="col-2 rrss embed-responsive-item"
+            src="iconos/social_Twitter_2755.png"></a>
+        <a href="http://www.github.com"><img class="col-2 rrss embed-responsive-item"
+            src="iconos/Github_icon-icons.com_49946.png"></a>
+        <a href="http://www.linkedin.com"><img class="col-2 rrss embed-responsive-item"
+            src="iconos/sociallinkedin_member_2751.png"></a>
+        <a href="http://www.instagram.com"><img class="col-2 rrss embed-responsive-item"
+            src="iconos/instagram_f_icon-icons.com_65485.svg"></a>
+      </div>
+      <div class="col-md-1 col-sm-3 col-4 text-center ">
+        <img class="embed-responsive-item" src="iconos/by-nc-nd.eu.svg">
+      </div>
+    </footer>
 
-<!-- Modal -->
-<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="Title"></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" id="cerrarModal"data-dismiss="modal">Close</button>
+    <!-- Modal -->
+    <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="Title"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="cerrarModal" data-dismiss="modal">Close</button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-    </main>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="jquery/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="jquery/funciones.js"></script>
-  </body>
+  </main>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="jquery/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="jquery/funciones.js"></script>
+</body>
+
 </html>

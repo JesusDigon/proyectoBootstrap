@@ -1,0 +1,23 @@
+body #zonaScroll {
+  overflow: auto;
+  height: 500px;
+}
+body #carrusel {
+  height: 250px;
+}
+body .carousel-inner {
+  height: 250px;
+}
+body .carousel-item {
+  height: 250px;
+}
+body .imgCarousel {
+  height: 250px;
+}
+body .carousel-control-next,
+body .carousel-control-prev {
+  filter: invert();
+}
+body .rrss:hover {
+  filter: contrast(25%);
+}

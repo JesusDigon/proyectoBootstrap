@@ -1,222 +1,224 @@
 <!doctype html>
 <html lang="es">
-  <head>
-   
-    <title>Title</title>
-    <!-- Required meta tags -->
-    
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/vnd.microsoft.icon" href="iconos/bootstrap-brands.ico" sizes="64x64">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <style>
-  
-       
-      #zonaScroll{
-        overflow: auto;
-          height: 500px;
-      }
-     
-      #carrusel{
-        height: 250px;
-      }
-      .carousel-inner{
-        height: 250px;
-      }
-      .carousel-item{
-        height: 250px;
-      }
-      .imgCarousel{
-        height: 250px;
-      }
-      .carousel-control-next, .carousel-control-prev{
-       filter:invert();
-      }
-      
-      a .rrss:hover{
-        filter: contrast(25%);
-      }
-     
-  </style>
-  </head>
-  <body>
-    <main class="container-fluid">
-      <header class="row">
+
+<head>
+
+  <title>Title</title>
+  <!-- Required meta tags -->
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Favicon -->
+  <link rel="icon" type="image/vnd.microsoft.icon" href="iconos/bootstrap-brands.ico" sizes="64x64">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/1.css">
+</head>
+
+<body>
+
+  <!-- Contenedor Principal -->
+  <main class="container-fluid">
+
+    <!-- Barra de navegación -->
+    <header class="row">
       <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
         <a class="navbar-brand" href="#">Bootstrap</a>
         <img src="iconos/bootstrap-brands.svg" width="30" height="30" alt="icono-bootstrap">
-        <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-        aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+          aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"><span
+            class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="collapsibleNavId">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-            <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ejemplos</a>
-            <div class="dropdown-menu" aria-labelledby="dropdownId">
-            <a class="dropdown-item" href="badges.html">BADGES</a>
-            <a class="dropdown-item" href="pagination.html">PAGINATION</a>
-            </div>
+              <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">Ejemplos</a>
+              <div class="dropdown-menu" aria-labelledby="dropdownId">
+                <a class="dropdown-item" href="badges.html">BADGES</a>
+                <a class="dropdown-item" href="pagination.html">PAGINATION</a>
+              </div>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="formulario.html">Envia tus dudas</a>
-              </li>
+            </li>
           </ul>
           <form class="form-inline my-2 my-md-0">
-          <label for="textoAbuscar"></label>
-          <input class="form-control mr-sm-2" type="text" placeholder="Buscar" id="textoAbuscar">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="buscador">Buscar</button>
+            <label for="textoAbuscar"></label>
+            <input class="form-control mr-sm-2" type="text" placeholder="Buscar" id="textoAbuscar">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="buscador">Buscar</button>
           </form>
         </div>
       </nav>
     </header>
+
+    <!-- Carousel -->
     <section class="row justify-content-center mt-1">
       <div class="col-sm-5 mt-5">
-          <div class="carousel slide mt-5 mb-5" id="carrusel" data-ride="carousel">
-              <div class="carousel-inner">
-                  <div class="carousel-item active">
-                      <img class="w-100 d-block imgCarousel" src="imagenes/Ngx-bootstrap_logo.png" alt="Primer elemento">
-                  </div>
-                  <div class="carousel-item">
-                      <img class="w-100 d-block imgCarousel" src="imagenes/Bootstrap-Algebra.png" alt="Segundo elemento">
-                  </div>
-                  <div class="carousel-item">
-                      <img class="w-100 d-block imgCarousel" src="imagenes/Bootstrap_DATA_SCIENCE_Logo_FINAL.png" alt="Tercer elemento">
-                  </div>
-              </div>
-              <a class="carousel-control-prev" href="#carrusel" data-slide="prev">
-                  <span class="carousel-control-prev-icon " aria-hidden="true"></span>
-                  <span class="sr-only">Anterior</span>
-              </a>
-              <a class="carousel-control-next" href="#carrusel" data-slide="next">
-                  <span class="carousel-control-next-icon "></span>
-                  <span class="sr-only">Posterior</span>
-              </a>
-              
+        <div class="carousel slide mt-5 mb-5" id="carrusel" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="w-100 d-block imgCarousel" src="imagenes/Ngx-bootstrap_logo.png" alt="Primer elemento">
+            </div>
+            <div class="carousel-item">
+              <img class="w-100 d-block imgCarousel" src="imagenes/Bootstrap-Algebra.png" alt="Segundo elemento">
+            </div>
+            <div class="carousel-item">
+              <img class="w-100 d-block imgCarousel" src="imagenes/Bootstrap_DATA_SCIENCE_Logo_FINAL.png"
+                alt="Tercer elemento">
+            </div>
           </div>
+          <a class="carousel-control-prev" href="#carrusel" data-slide="prev">
+            <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+          </a>
+          <a class="carousel-control-next" href="#carrusel" data-slide="next">
+            <span class="carousel-control-next-icon "></span>
+            <span class="sr-only">Posterior</span>
+          </a>
+
+        </div>
       </div>
-  </section>
-    <section class="row  mb-5" id="spyScroll">
-        <nav id="navbar-medio" class=" col-md-3 navbar navbar-expand-md navbar-light bg-light mt-5 mb-5 ">
-            <nav id="navCambiable" class="nav nav-pills flex-column mb-5 p-2 rounded">
-              <a class="nav-link" href="#item-1">BOOTSTRAP</a>
-              <a class="nav-link" href="#item-2">ORIGEN</a>
-              <a class="nav-link" href="#item-3">CARACTERÍSTICAS</a>
-              <a class="nav-link" href="#item-4">FUNCIÓN Y ESTRUCTURA</a>
-              <nav id="navCambiable2" class="nav nav-pills flex-column">
-                <a class="nav-link ml-3 my-1" href="#item-4-1">Sistema de cuadrilla y diseño sensible</a>
-                <a class="nav-link ml-3 my-1" href="#item-4-2">Comprensión de la hoja de estilo CSS</a>
-                <a class="nav-link ml-3 my-1" href="#item-4-3">Componentes re-utilizables</a>
-                <a class="nav-link ml-3 my-1" href="#item-4-4">Plug-ins de JavaScript</a>
-              </nav>
-              </nav>
-            </nav>
-          
-          <div data-spy="scroll" data-target="#navbar-medio" data-offset="0" class="col-md-8 mt-5 ml-5 mb-5" id="zonaScroll">
-            <h4 id="item-1">BOOTSTRAP</h4>
-            <p>Bootstrap es una biblioteca multiplataforma o conjunto de herramientas de código abierto para diseño de sitios y aplicaciones web. Contiene plantillas de diseño con tipografía, formularios, botones, cuadros, menús de navegación y otros elementos de diseño basado en HTML y CSS, así como extensiones de JavaScript adicionales. A diferencia de muchos frameworks web, solo se ocupa del desarrollo front-end.
-
-                Bootstrap es el segundo proyecto más destacado en GitHub1​ y es usado por la NASA y la MSNBC entre otras organizaciones.​</p>
-            <h4 id="item-2">ORIGEN</h4>
-            <p>Bootstrap, originalmente llamado Blueprint de Twitter, 
-                fue desarrollado por Mark Otto y Jacob Thornton de Twitter, 
-                como un marco de trabajo (framework) para fomentar la consistencia 
-                entre las herramientas internas. Antes de Bootstrap, se usaron varias 
-                bibliotecas para el desarrollo de interfaces de usuario, lo que generó 
-                inconsistencias y una gran carga de trabajo en su mantenimiento.
-                El primer desarrollo en condiciones reales ocurrió durante la primera 
-                "Semana de Hackeo" (Hackweek) de Twitter."​ Mark Otto mostró a algunos 
-                colegas como acelerar el desarrollo de sus proyectos con la ayuda de la 
-                herramienta de trabajo. Como resultado, decenas de temas se han introducido 
-                en el marco de trabajo.
-            
-                En agosto del 2011, Twitter liberó Bootstrap como código abierto. En 
-                febrero del 2012, se convirtió en el proyecto de desarrollo más popular de 
-                GitHub.</p>
-            <h4 id="item-3">CARACTERÍSTICAS</h4>
-            <p>Bootstrap tiene un soporte relativamente incompleto para HTML5 y CSS3,
-                pero es compatible con la mayoría de los navegadores web. 
-                La información básica de compatibilidad de sitios web o aplicaciones 
-                está disponible para todos los dispositivos y navegadores. 
-                Existe un concepto de compatibilidad parcial que hace disponible la 
-                información básica de un sitio web para todos los dispositivos y navegadores.
-                Por ejemplo, las propiedades introducidas en CSS3 para las esquinaS
-                redondeadas, gradientes y sombras son usadas por Bootstrap a pesar de la
-                falta de soporte de navegadores antiguos. Esto extiende la funcionalidad de
-                la herramienta, pero no es requerida para su uso.
-    
-                Desde la versión 2.0 también soporta diseños web adaptables. 
-                Esto significa que el diseño gráfico de la página se ajusta dinámicamente, 
-                tomando en cuenta las características del dispositivo usado 
-                (Computadoras, tabletas, teléfonos móviles).
-                
-                Bootstrap es de código abierto y está disponible en GitHub. 
-                Los desarrolladores están motivados a participar en el proyecto y a hacer 
-                sus propias contribuciones a la plataforma. </p>
-            <h4 id="item-4">FUNCIÓN Y ESTRUCTURA</h4>
-            <p>Bootstrap es modular y consiste esencialmente en una serie de hojas de estilo LESS que implementan la 
-                variedad de componentes de la herramienta. Una hoja de estilo llamada bootstrap.less incluye los 
-                componentes de las hojas de estilo. Los desarrolladores pueden adaptar el mismo archivo de Bootstrap, 
-                seleccionando los componentes que deseen usar en su proyecto.
-                Los ajustes son posibles en una medida limitada a través de una hoja de estilo de configuración central. 
-                Los cambios más profundos son posibles mediante las declaraciones LESS.
-                El uso del lenguaje de hojas de estilo LESS permite el uso de variables, funciones y operadores, 
-                selectores anidados, así como clases mixin.
-                Desde la versión 2.0, la configuración de Bootstrap también tiene una opción especial de "Personalizar" 
-                en la documentación. Por otra parte, los desarrolladores eligen en un formulario los componentes y 
-                ajustes deseados, y de ser necesario, los valores de varias opciones a sus necesidades. El paquete 
-                consecuentemente generado ya incluye la hoja de estilo CSS pre-compilada.  </p>
-            <h5 id="item-4-1">Sistema de cuadrilla y diseño sensible</h5>
-            <p>Bootstrap viene con una disposición de cuadrilla estándar de 940 píxeles de ancho. Alternativamente, 
-                el desarrollador puede usar un diseño de ancho-variable. Para ambos casos, la herramienta tiene cuatro 
-                variaciones para hacer uso de distintas resoluciones y tipos de dispositivos: teléfonos móviles, formato 
-                de retrato y paisaje, tabletas y computadoras con baja y alta resolución (pantalla ancha). Esto ajusta el 
-                ancho de las columnas automáticamente. </p>
-            <h5 id="item-4-2">Compresión de la hoja de estilos CSS</h5>
-            <p>Bootstrap proporciona un conjunto de hojas de estilo que proveen definiciones básicas de estilo para todos los 
-                componentes de HTML. Esto otorga una uniformidad al navegador y al sistema de anchura, da una apariencia moderna 
-                para el formateo de los elementos de texto, tablas y formularios. </p>
-            <h5 id="item-4-3">Componentes re-utilizables</h5>
-            <p>Bootstrap proporciona un conjunto de hojas de estilo que proveen definiciones básicas de estilo para 
-                todos los componentes de HTML. Esto otorga una uniformidad al navegador y al sistema de anchura, da una 
-                apariencia moderna para el formateo de los elementos de texto, tablas y formularios. </p>
-            <h5 id="item-4-4">Plugins de Javascript</h5>
-            <p>Los componentes de JavaScript para Bootstrap están basados en la librería jQuery de JavaScript. Los 
-                plug-ins se encuentran en la herramienta de plug-in de jQuery. Proveen elementos adicionales de interfaz 
-                de usuario como diálogos, tooltips y carruseles. También extienden la funcionalidad de algunos elementos 
-                de interfaz existentes, incluyendo por ejemplo una función de auto-completar para campos de entrada (input). 
-                La versión 2.0 soporta los siguientes plug-ins de JavaScript: Modal, Dropdown, Scrollspy, Tab, Tooltip, Popover,
-                Alert, Button, Collapse, Carousel y Typeahead.
-                Una implementación de Bootstrap usando el Dojo toolkit también está disponible. Es llamada Dojo 
-                Bootstrap y es un puerto de los plug-ins de Twitter Bootstrap. Usa el código Dojo al 100% y tiene 
-                soporte para AMD (Asynchronous Module Definition8). </p>
-          </div>
     </section>
-  </section>
-  <footer class="row bg-primary  mt-5 p-2 ">
-    <p class="text-center text-white small col-sm-6 mt-3">Diseño del sitio © 2020 Jesús Digón. Iconos cedidos por iconos.iconos.com. Siguenos en nuestras RRSS: </p>
-    <div class="col-5-sm text-center">
-    <a href="http://www.twitter.com" ><img class="col-2 rrss embed-responsive-item" src="iconos/social_Twitter_2755.png"></a>
-    <a href="http://www.github.com"><img class="col-2 rrss embed-responsive-item" src="iconos/Github_icon-icons.com_49946.png"></a>
-    <a href="http://www.linkedin.com" ><img class="col-2 rrss embed-responsive-item" src="iconos/sociallinkedin_member_2751.png"></a>
-    <a href="http://www.instagram.com" ><img class="col-2 rrss embed-responsive-item" src="iconos/instagram_f_icon-icons.com_65485.svg"></a>
-    </div>
-    <div class="col-md-1 col-sm-3 col-4 text-center ">
-    <img class="embed-responsive-item" src="iconos/by-nc-nd.eu.svg">
-  </div>
-</footer>
 
+    <!-- SpyScroll -->
+    <section class="row  mb-5" id="spyScroll">
+      <nav id="navbar-medio" class=" col-md-3 navbar navbar-expand-md navbar-light bg-light mt-5 mb-5 ">
+        <nav id="navCambiable" class="nav nav-pills flex-column mb-5 p-2 rounded">
+          <a class="nav-link" href="#item-1">BOOTSTRAP</a>
+          <a class="nav-link" href="#item-2">ORIGEN</a>
+          <a class="nav-link" href="#item-3">CARACTERÍSTICAS</a>
+          <a class="nav-link" href="#item-4">FUNCIÓN Y ESTRUCTURA</a>
+          <nav id="navCambiable2" class="nav nav-pills flex-column">
+            <a class="nav-link ml-3 my-1" href="#item-4-1">Sistema de cuadrilla y diseño sensible</a>
+            <a class="nav-link ml-3 my-1" href="#item-4-2">Comprensión de la hoja de estilo CSS</a>
+            <a class="nav-link ml-3 my-1" href="#item-4-3">Componentes re-utilizables</a>
+            <a class="nav-link ml-3 my-1" href="#item-4-4">Plug-ins de JavaScript</a>
+          </nav>
+        </nav>
+      </nav>
 
-    </main>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="jquery/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="jquery/funciones.js"></script>
-  </body>
+      <div data-spy="scroll" data-target="#navbar-medio" data-offset="0" class="col-md-8 mt-5 ml-5 mb-5"
+        id="zonaScroll">
+        <h4 id="item-1">BOOTSTRAP</h4>
+        <p>Bootstrap es una biblioteca multiplataforma o conjunto de herramientas de código abierto para diseño de
+          sitios y aplicaciones web. Contiene plantillas de diseño con tipografía, formularios, botones, cuadros, menús
+          de navegación y otros elementos de diseño basado en HTML y CSS, así como extensiones de JavaScript
+          adicionales. A diferencia de muchos frameworks web, solo se ocupa del desarrollo front-end.
+
+          Bootstrap es el segundo proyecto más destacado en GitHub1​ y es usado por la NASA y la MSNBC entre otras
+          organizaciones.​</p>
+        <h4 id="item-2">ORIGEN</h4>
+        <p>Bootstrap, originalmente llamado Blueprint de Twitter,
+          fue desarrollado por Mark Otto y Jacob Thornton de Twitter,
+          como un marco de trabajo (framework) para fomentar la consistencia
+          entre las herramientas internas. Antes de Bootstrap, se usaron varias
+          bibliotecas para el desarrollo de interfaces de usuario, lo que generó
+          inconsistencias y una gran carga de trabajo en su mantenimiento.
+          El primer desarrollo en condiciones reales ocurrió durante la primera
+          "Semana de Hackeo" (Hackweek) de Twitter."​ Mark Otto mostró a algunos
+          colegas como acelerar el desarrollo de sus proyectos con la ayuda de la
+          herramienta de trabajo. Como resultado, decenas de temas se han introducido
+          en el marco de trabajo.
+
+          En agosto del 2011, Twitter liberó Bootstrap como código abierto. En
+          febrero del 2012, se convirtió en el proyecto de desarrollo más popular de
+          GitHub.</p>
+        <h4 id="item-3">CARACTERÍSTICAS</h4>
+        <p>Bootstrap tiene un soporte relativamente incompleto para HTML5 y CSS3,
+          pero es compatible con la mayoría de los navegadores web.
+          La información básica de compatibilidad de sitios web o aplicaciones
+          está disponible para todos los dispositivos y navegadores.
+          Existe un concepto de compatibilidad parcial que hace disponible la
+          información básica de un sitio web para todos los dispositivos y navegadores.
+          Por ejemplo, las propiedades introducidas en CSS3 para las esquinaS
+          redondeadas, gradientes y sombras son usadas por Bootstrap a pesar de la
+          falta de soporte de navegadores antiguos. Esto extiende la funcionalidad de
+          la herramienta, pero no es requerida para su uso.
+
+          Desde la versión 2.0 también soporta diseños web adaptables.
+          Esto significa que el diseño gráfico de la página se ajusta dinámicamente,
+          tomando en cuenta las características del dispositivo usado
+          (Computadoras, tabletas, teléfonos móviles).
+
+          Bootstrap es de código abierto y está disponible en GitHub.
+          Los desarrolladores están motivados a participar en el proyecto y a hacer
+          sus propias contribuciones a la plataforma. </p>
+        <h4 id="item-4">FUNCIÓN Y ESTRUCTURA</h4>
+        <p>Bootstrap es modular y consiste esencialmente en una serie de hojas de estilo LESS que implementan la
+          variedad de componentes de la herramienta. Una hoja de estilo llamada bootstrap.less incluye los
+          componentes de las hojas de estilo. Los desarrolladores pueden adaptar el mismo archivo de Bootstrap,
+          seleccionando los componentes que deseen usar en su proyecto.
+          Los ajustes son posibles en una medida limitada a través de una hoja de estilo de configuración central.
+          Los cambios más profundos son posibles mediante las declaraciones LESS.
+          El uso del lenguaje de hojas de estilo LESS permite el uso de variables, funciones y operadores,
+          selectores anidados, así como clases mixin.
+          Desde la versión 2.0, la configuración de Bootstrap también tiene una opción especial de "Personalizar"
+          en la documentación. Por otra parte, los desarrolladores eligen en un formulario los componentes y
+          ajustes deseados, y de ser necesario, los valores de varias opciones a sus necesidades. El paquete
+          consecuentemente generado ya incluye la hoja de estilo CSS pre-compilada. </p>
+        <h5 id="item-4-1">Sistema de cuadrilla y diseño sensible</h5>
+        <p>Bootstrap viene con una disposición de cuadrilla estándar de 940 píxeles de ancho. Alternativamente,
+          el desarrollador puede usar un diseño de ancho-variable. Para ambos casos, la herramienta tiene cuatro
+          variaciones para hacer uso de distintas resoluciones y tipos de dispositivos: teléfonos móviles, formato
+          de retrato y paisaje, tabletas y computadoras con baja y alta resolución (pantalla ancha). Esto ajusta el
+          ancho de las columnas automáticamente. </p>
+        <h5 id="item-4-2">Compresión de la hoja de estilos CSS</h5>
+        <p>Bootstrap proporciona un conjunto de hojas de estilo que proveen definiciones básicas de estilo para todos
+          los
+          componentes de HTML. Esto otorga una uniformidad al navegador y al sistema de anchura, da una apariencia
+          moderna
+          para el formateo de los elementos de texto, tablas y formularios. </p>
+        <h5 id="item-4-3">Componentes re-utilizables</h5>
+        <p>Bootstrap proporciona un conjunto de hojas de estilo que proveen definiciones básicas de estilo para
+          todos los componentes de HTML. Esto otorga una uniformidad al navegador y al sistema de anchura, da una
+          apariencia moderna para el formateo de los elementos de texto, tablas y formularios. </p>
+        <h5 id="item-4-4">Plugins de Javascript</h5>
+        <p>Los componentes de JavaScript para Bootstrap están basados en la librería jQuery de JavaScript. Los
+          plug-ins se encuentran en la herramienta de plug-in de jQuery. Proveen elementos adicionales de interfaz
+          de usuario como diálogos, tooltips y carruseles. También extienden la funcionalidad de algunos elementos
+          de interfaz existentes, incluyendo por ejemplo una función de auto-completar para campos de entrada (input).
+          La versión 2.0 soporta los siguientes plug-ins de JavaScript: Modal, Dropdown, Scrollspy, Tab, Tooltip,
+          Popover,
+          Alert, Button, Collapse, Carousel y Typeahead.
+          Una implementación de Bootstrap usando el Dojo toolkit también está disponible. Es llamada Dojo
+          Bootstrap y es un puerto de los plug-ins de Twitter Bootstrap. Usa el código Dojo al 100% y tiene
+          soporte para AMD (Asynchronous Module Definition8). </p>
+      </div>
+    </section>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="row bg-primary  mt-5 p-2 ">
+      <p class="text-center text-white small col-sm-6 mt-3">Diseño del sitio © 2020 Jesús Digón. Iconos cedidos por
+        iconos.iconos.com. Siguenos en nuestras RRSS: </p>
+      <div class="col-5-sm text-center">
+        <a href="http://www.twitter.com"><img class="col-2 rrss embed-responsive-item"
+            src="iconos/social_Twitter_2755.png"></a>
+        <a href="http://www.github.com"><img class="col-2 rrss embed-responsive-item"
+            src="iconos/Github_icon-icons.com_49946.png"></a>
+        <a href="http://www.linkedin.com"><img class="col-2 rrss embed-responsive-item"
+            src="iconos/sociallinkedin_member_2751.png"></a>
+        <a href="http://www.instagram.com"><img class="col-2 rrss embed-responsive-item"
+            src="iconos/instagram_f_icon-icons.com_65485.svg"></a>
+      </div>
+      <div class="col-md-1 col-sm-3 col-4 text-center ">
+        <img class="embed-responsive-item" src="iconos/by-nc-nd.eu.svg">
+      </div>
+    </footer>
+  </main>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="jquery/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="jquery/funciones.js"></script>
+</body>
+
 </html>
