@@ -30,17 +30,37 @@ $(document).ready(function(){
 });
  
 $(document).ready(function(){
+  
   $("#boton").on("click", function(){
-    $("input").each(function(){
+    var contador=0;
+    
+    var nombre=$("#nombre").val();
+    var correo=$("#correo").val();
+    $("#formularioCentral input").each(function(){
       if($(this).val()==""){
         $(this).addClass("is-invalid");
+        contador++;
       }else{
         $(this).addClass("is-valid");
         $(this).removeClass("is-invalid");
       }
+     
+    
     });
-  });
+    if(contador==0){
+      $("#Modal").modal("toggle");
+        $(".modal-title").text("¡Gracias por contactar con nostros "+nombre+"!");
+        $(".modal-body").text("En breve nos pondremos en contacto contigo en el correo "+correo+" ."+
+        "No debería, pero estate atento por si nuestro mensaje llegara a tu carpeta de span");
+      }
+    
+    });
+    $("#cerrarModal").on("click", function(){
+      $("#formularioCentral").submit();
+    });
 });
+
+
      
   $(window).resize(function(){
     if($(window).width()<=768){
