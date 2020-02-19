@@ -1,6 +1,6 @@
 $(document).ready(function () {
   $("#buscador").click(function () {
-    $("h4").each(function () {
+    $("h1").each(function () {
       var texto = $("#textoAbuscar").val().toUpperCase();
       var cabeceras = $(this).text().toUpperCase();
 
@@ -20,12 +20,24 @@ $(document).ready(function () {
     });
   });
 });
+
+
 $(document).ready(function () {
   $("#textoAbuscar").on("keyup", function () {
     var value = $(this).val().toLowerCase();
     $("#zonaScroll").filter(function () {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
     });
+  });
+});
+
+$(document).ready(function () {
+  var NombresValidos=[];
+  $("a").each(function(){
+    NombresValidos.push($(this).text());
+  });
+  $("#textoAbuscar").autocomplete({
+    source: NombresValidos
   });
 });
 
