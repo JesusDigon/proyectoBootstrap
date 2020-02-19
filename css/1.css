@@ -24,3 +24,12 @@ body .rrss:hover {
 .rrss{
   width: 4em;
 }
+section{
+  font-family: 'Roboto', sans-serif;
+}
+h1{
+  font-family: 'Source Sans Pro', sans-serif;
+}
+footer{
+  font-family: 'Raleway', sans-serif;
+}
