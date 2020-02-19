@@ -21,3 +21,6 @@ body .carousel-control-prev {
 body .rrss:hover {
   filter: contrast(25%);
 }
+.rrss{
+  width: 4em;
+}

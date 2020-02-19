@@ -32,8 +32,8 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-  var NombresValidos=[];
-  $("a").each(function(){
+  var NombresValidos = [];
+  $("a").each(function () {
     NombresValidos.push($(this).text());
   });
   $("#textoAbuscar").autocomplete({
